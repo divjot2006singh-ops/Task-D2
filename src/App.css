@@ -1,0 +1,754 @@
+/* Navigation bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    min-height: 65px;
+    padding: 10px 25px;
+    background-color: #eeeeee;
+    border-top: 5px solid #ff5252;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 22px;
+    color: #222;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.search-bar {
+    flex: 1;
+    min-width: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+}
+
+.nav-links a {
+    color: #222;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-links button:hover {
+    background-color: #ddd;
+}
+
+.nav-links a:hover {
+    color: #ff5252;
+}
+
+/* Signup page */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 20px;
+    min-height: 450px;
+}
+
+.auth-box {
+    width: 100%;
+    max-width: 550px;
+    padding: 25px;
+    border: 1px solid #9bbde9;
+    box-sizing: border-box;
+}
+
+.auth-box h2 {
+    text-align: center;
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.auth-box label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+.auth-button {
+    display: block;
+    width: 65%;
+    margin: 25px auto 10px;
+    padding: 10px;
+    border: none;
+    background-color: #4285f4;
+    color: white;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .search-bar {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .auth-container {
+        padding: 25px 15px;
+    }
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+}
+
+
+
+
+/* New Post page*/ 
+
+.post-container {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 0;
+    background: white;
+    color: #111;
+    font-family: Arial, sans-serif;
+}
+
+.post-heading,
+.post-section-heading {
+    background: #dedede;
+    padding: 7px 12px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.post-heading {
+    margin: 0 0 15px;
+}
+
+.post-type {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 15px 5px 28px;
+    font-size: 15px;
+}
+
+.post-type label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.post-type input {
+    margin: 0;
+}
+
+.post-section-heading {
+    margin: 0 0 10px;
+}
+
+.post-instructions {
+    margin: 10px 18px 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.post-instructions span {
+    color: #ed5145;
+}
+
+.post-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 12px;
+}
+
+.post-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.post-field label {
+    font-size: 14px;
+}
+
+.post-field input,
+.post-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #888;
+    border-radius: 0;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #111;
+}
+
+.post-field input {
+    min-height: 32px;
+}
+
+.post-field textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.post-description textarea {
+    min-height: 350px;
+}
+
+.post-field input:focus,
+.post-field textarea:focus {
+    outline: 1px solid #555;
+}
+
+.post-tags {
+    display: grid;
+    grid-template-columns: 65px minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+}
+
+.post-tags input {
+    min-width: 0;
+}
+
+.post-error {
+    color: #c62828;
+    font-size: 14px;
+    margin: 0;
+}
+
+.post-submit {
+    align-self: flex-end;
+    width: 195px;
+    min-height: 38px;
+    border: none;
+    border-radius: 0;
+    background: #a6a6a6;
+    color: #111;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.post-submit:hover {
+    background: #929292;
+}
+
+@media (max-width: 700px) {
+    .post-container {
+        margin: 20px 12px;
+    }
+
+    .post-type {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .post-description textarea {
+        min-height: 220px;
+    }
+
+    .post-tags {
+        grid-template-columns: 1fr;
+    }
+
+    .post-submit {
+        width: 140px;
+    }
+}
+
+/* BROWSE POSTS PAGE */
+
+.browse-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    min-height: 500px;
+}
+
+.browse-heading {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.browse-user-info {
+    background: #f1f1f1;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+.browse-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.browse-filters input,
+.browse-filters select {
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 140px;
+}
+
+.browse-reset {
+    padding: 11px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.browse-post-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 22px;
+    margin-bottom: 20px;
+    background: white;
+}
+
+.browse-post-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.post-badge,
+.post-type-badge {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+.post-badge.free {
+    background: #d9f5df;
+    color: #167333;
+}
+
+.post-badge.paid {
+    background: #fff0c2;
+    color: #9a6800;
+}
+
+.post-type-badge {
+    background: #e5e5e5;
+}
+
+.browse-post-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.browse-author,
+.browse-date {
+    color: #777;
+    font-size: 14px;
+}
+
+.browse-preview {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.browse-full-content {
+    padding: 15px;
+    background: #f7f7f7;
+    border-radius: 5px;
+    margin: 15px 0;
+    line-height: 1.7;
+}
+
+.browse-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.browse-tags span {
+    color: #007bff;
+    font-size: 14px;
+}
+
+.browse-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.browse-actions button {
+    padding: 9px 18px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.browse-actions button:hover,
+.browse-reset:hover {
+    background: #555;
+}
+
+.browse-total {
+    margin-top: 20px;
+    color: #666;
+}
+
+/* Upgrade Plan modal */
+
+.upgrade-overlay {
+position: fixed;
+inset: 0;
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px;
+background: rgba(0, 0, 0, 0.58);
+overflow-y: auto;
+}
+
+.upgrade-modal {
+position: relative;
+width: 100%;
+max-width: 480px;
+max-height: calc(100vh - 40px);
+overflow-y: auto;
+padding: 30px;
+background: #fff;
+border-radius: 12px;
+box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+box-sizing: border-box;
+}
+
+.upgrade-modal h2 {
+margin: 0 35px 10px 0;
+font-size: 25px;
+color: #222;
+}
+
+.upgrade-description {
+margin-bottom: 22px;
+color: #666;
+font-size: 14px;
+line-height: 1.6;
+}
+
+.upgrade-close {
+position: absolute;
+top: 12px;
+right: 15px;
+border: none;
+background: transparent;
+color: #555;
+font-size: 30px;
+cursor: pointer;
+}
+
+.upgrade-modal form {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.upgrade-modal form label {
+margin-top: 8px;
+font-size: 14px;
+font-weight: bold;
+color: #333;
+}
+
+.upgrade-modal form input {
+width: 100%;
+min-width: 0;
+padding: 11px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-sizing: border-box;
+font-size: 15px;
+}
+
+.upgrade-modal form input:focus {
+outline: 2px solid #ffb3b3;
+border-color: #ff5252;
+}
+
+.upgrade-card-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
+}
+
+.upgrade-card-row > div {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.upgrade-error {
+margin: 10px 0 0;
+color: #c62828;
+font-size: 14px;
+line-height: 1.5;
+}
+
+.upgrade-security-note {
+margin: 18px 0 0;
+color: #777;
+text-align: center;
+font-size: 12px;
+line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+.upgrade-modal {
+padding: 24px 18px;
+}
+
+.upgrade-card-row {
+    gap: 10px;
+}
+
+}
+
+/* Pricing page */
+
+.pricing-page {
+max-width: 1100px;
+margin: 0 auto;
+padding: 55px 25px;
+color: #222;
+font-family: Arial, sans-serif;
+}
+
+.pricing-intro {
+text-align: center;
+margin-bottom: 45px;
+}
+
+.pricing-eyebrow {
+color: #ff5252;
+font-size: 13px;
+font-weight: bold;
+letter-spacing: 2px;
+}
+
+.pricing-intro h1 {
+margin: 12px 0;
+font-size: 38px;
+}
+
+.pricing-intro > p:not(.pricing-eyebrow) {
+color: #666;
+line-height: 1.6;
+}
+
+.current-plan {
+display: inline-flex;
+align-items: center;
+gap: 12px;
+margin-top: 15px;
+padding: 12px 18px;
+background: #f3f3f3;
+border-radius: 8px;
+}
+
+.current-plan strong {
+color: #ff5252;
+}
+
+.login-notice {
+margin-top: 20px;
+}
+
+.login-notice a {
+color: #e84444;
+font-weight: bold;
+}
+
+.pricing-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 25px;
+max-width: 850px;
+margin: 0 auto;
+}
+
+.pricing-card {
+position: relative;
+display: flex;
+flex-direction: column;
+padding: 32px 28px;
+background: white;
+border: 1px solid #ddd;
+border-radius: 12px;
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.paid-card {
+border: 2px solid #ff5252;
+}
+
+.popular-badge {
+position: absolute;
+top: -13px;
+right: 20px;
+padding: 7px 12px;
+background: #ff5252;
+color: white;
+border-radius: 20px;
+font-size: 11px;
+font-weight: bold;
+}
+
+.plan-heading h2 {
+margin: 0 0 10px;
+font-size: 27px;
+}
+
+.plan-description {
+min-height: 42px;
+color: #666;
+line-height: 1.5;
+}
+
+.plan-price {
+margin: 22px 0;
+font-size: 35px;
+font-weight: bold;
+}
+
+.plan-price span {
+font-size: 14px;
+font-weight: normal;
+color: #777;
+}
+
+.plan-features {
+flex: 1;
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+.plan-features li {
+display: flex;
+gap: 10px;
+margin-bottom: 17px;
+color: #444;
+line-height: 1.5;
+}
+
+.plan-features li span {
+color: #20a464;
+font-weight: bold;
+}
+
+.pricing-button {
+width: 100%;
+margin-top: 25px;
+padding: 13px 18px;
+border: none;
+border-radius: 6px;
+font-size: 15px;
+font-weight: bold;
+}
+
+.secondary-button {
+background: #eee;
+color: #555;
+cursor: not-allowed;
+}
+
+.upgrade-button {
+background: #ff5252;
+color: white;
+cursor: pointer;
+transition: background 0.2s ease;
+}
+
+.upgrade-button:hover:not(:disabled) {
+background: #e84444;
+}
+
+.upgrade-button:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+}
+
+.pricing-disclaimer {
+margin-top: 35px;
+color: #777;
+text-align: center;
+font-size: 13px;
+line-height: 1.6;
+}
+
+@media (max-width: 650px) {
+.pricing-page {
+padding: 35px 16px;
+}
+
+.pricing-intro h1 {
+    font-size: 30px;
+}
+
+.pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.pricing-card {
+    padding: 28px 22px;
+}
+
+}
+
